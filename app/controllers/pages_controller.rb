@@ -1,38 +1,38 @@
 class PagesController < ApplicationController
   def home
-    @title = "home"
+    @title = "Home"
   end
 
   def contact
-    @title = "contact"
+    @title = "Contact"
   end
 
   def about
-    @title = "about"
+    @title = "About"
   end
 
   def center
-    @title = "center"
+    @title = "Center"
   end
 
   def book
-    @title = "book"
+    @title = "Book"
   end
 
   def picture
-    @title = "picture"
+    @title = "Picture"
   end
 
   def audio
-    @title = "audio"
+    @title = "Audio"
   end
 
   def video
-    @title = "video"
+    @title = "Video"
   end
 
   def representative
-    @title = "representative"
+    @title = "Representative"
   end
 
 end

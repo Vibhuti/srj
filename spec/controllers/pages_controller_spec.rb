@@ -2,6 +2,9 @@ require 'spec_helper'
 
 describe PagesController do
   render_views
+  before(:each)do
+    @base_title = "Swami Ramanand Speeches "
+  end
 
   describe "GET 'home'" do
     it "should be successful" do
@@ -12,7 +15,7 @@ describe PagesController do
     it "should have the right title" do
       get 'home'
       response.should have_selector("title",
-                                    :content => "Swami Ramanand Speeches|home")
+                                    :content => @base_title + "| Home")
     end
   end
 
@@ -24,7 +27,7 @@ describe PagesController do
     it "should have the right title" do
       get 'contact'
       response.should have_selector("title",
-                                    :content => "Swami Ramanand Speeches|contact")
+                                    :content => @base_title + "| Contact")
     end
   end
 
@@ -36,7 +39,7 @@ describe PagesController do
      it "should have the right title" do
       get 'about'
       response.should have_selector("title",
-                                    :content => "Swami Ramanand Speeches|about")
+                                    :content => @base_title + "| About")
      end
   end
 
@@ -48,7 +51,7 @@ describe PagesController do
      it "should have the right title" do
       get 'center'
       response.should have_selector("title",
-                                    :content => "Swami Ramanand Speeches|center")
+                                    :content => @base_title + "| Center")
      end
    end
 
@@ -60,7 +63,7 @@ describe PagesController do
      it "should have the right title" do
       get 'book'
       response.should have_selector("title",
-                                    :content => "Swami Ramanand Speeches|book")
+                                    :content => @base_title + "| Book")
      end
     end
 
@@ -72,7 +75,7 @@ describe PagesController do
      it "should have the right title" do
       get 'picture'
       response.should have_selector("title",
-                                    :content => "Swami Ramanand Speeches|picture")
+                                    :content => @base_title + "| Picture")
      end
     end
 
@@ -84,7 +87,7 @@ describe PagesController do
      it "should have the right title" do
       get 'video'
       response.should have_selector("title",
-                                    :content => "Swami Ramanand Speeches|video")
+                                    :content => @base_title + "| Video")
      end
     end
 
@@ -96,7 +99,7 @@ describe PagesController do
      it "should have the right title" do
       get 'audio'
       response.should have_selector("title",
-                                    :content => "Swami Ramanand Speeches|audio")
+                                    :content => @base_title + "| Audio")
      end
     end
 
@@ -108,7 +111,7 @@ describe PagesController do
      it "should have the right title" do
       get 'representative'
       response.should have_selector("title",
-                                    :content => "Swami Ramanand Speeches|representative")
+                                    :content => @base_title + "| Representative")
      end
   end
 
